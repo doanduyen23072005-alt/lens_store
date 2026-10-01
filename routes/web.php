@@ -223,3 +223,4 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
     Route::resource('pages', AdminPageController::class)->except(['show']);
     Route::resource('posts', AdminPostController::class)->except(['show']);
 });
+Route::get('/up', fn () => response('OK', 200));
